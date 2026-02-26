@@ -1,0 +1,39 @@
+# ============================================================
+# MARKET MOOD INTELLIGENCE - Databricks Dependencies
+# Runtime: Databricks ML 14.x (Spark 3.5, Python 3.11)
+# 
+# NO incluir: pyspark, pandas, numpy, torch, mlflow, delta-spark
+# Estas ya vienen en el runtime ML y reinstalarlas causa conflictos
+# ============================================================
+
+# --- APIs de datos financieros ---
+yfinance==0.2.36
+alpha-vantage==2.3.1
+
+# --- APIs de redes sociales ---
+praw==7.7.1                  # Reddit API wrapper
+apify-client==1.7.1          # Apify (scraping alternativo)
+
+# --- API de Spotify ---
+spotipy==2.23.0
+
+# --- Noticias ---
+newsapi-python==0.2.7
+
+# --- NLP y modelos de lenguaje ---
+transformers==4.40.0         # HuggingFace - para FinBERT
+datasets==2.19.0             # HuggingFace Datasets - para preparar datos de fine-tuning
+tokenizers==0.19.1           # Tokenizadores rápidos (dependencia de transformers)
+accelerate==0.30.0           # Optimización de training en distintos hardware
+
+# --- Procesamiento de texto ---
+nltk==3.8.1
+emoji==2.11.1                # Manejo de emojis en texto de redes sociales
+
+# --- Validación de datos ---
+great-expectations==0.18.15  # Validación de calidad del data lake
+
+# --- Utilidades ---
+python-dotenv==1.0.1         # Carga de variables de entorno en local
+requests==2.31.0             # HTTP requests (para APIs sin wrapper)
+tenacity==8.2.3              # Retry logic para llamadas a APIs externas
