@@ -1,1 +1,4 @@
 notebooks/data/*
+notebooks/.cache
+notebooks/models/mlruns/*
+mlflow.db
